@@ -15,84 +15,162 @@
 
 <body>
 
+    <!-- Header & Navbar -->
     <header>
         <div class="title">
             <h1>Guadalupe Trúccolo</h1>
         </div>
-        <div class="fas fa-bars"></div>
+        <div id="menu" class="fas fa-bars"></div>
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrarMenu">
+            <a href="/Estructura/pages/contacto/contacto.html">&#8801</a>
+        </label>
         <nav class="navbar">
             <ul>
-                <li><a href="#inicio">Inicio</a></li> <!-- Ancla al inicio -->
-                <li><a href="#proyectos">Proyectos</a></li> <!-- Ancla a mis proyectos -->
-                <li><a href="#aboutMe">Acerca de mí</a></li> <!-- Ancla a la sección "Acerca de mí" -->
-                <li><a href="pages/contacto/contacto.html">Contacto</a></li> <!-- Html distinto -->
+                <li><a class="disabled" href="#home">Home</a></li>
+                <li><a class="disabled" href="#portfolio">Portfolio</a></li>
+                <li><a class="disabled" href="#aboutMe">Acerca de mí</a></li>
+                <li><a class="disabled" href="/Estructura/pages/contacto/contacto.html">Contacto</a></li>
+                <label for="check" class="esconderMenu">
+                    &#215
+                </label>
             </ul>
         </nav>
     </header>
 
-    <!-- First section (inicio) -->
-    <main>
-        <section class="section1" id="inicio">
-            <div class="container">
-                <div class="inicio">
-                    <div class="text">
-                        <p>¡Hola!</p>
-                        <p>Mi nombre es</p>
-                        <p><span>Guadalupe Trúccolo</span></p>
-                    </div>
-
+    <!-- First section (home) using Flexbox -->
+    <section class="section1" id="home">
+        <div class="container">
+            <div class="flexNOT inicio">
+                <div class="text">
+                    <p>¡Hola!</p>
+                    <p>Mi nombre es</p>
+                    <p><span>Guadalupe Trúccolo</span></p>
+                </div>
+                <!-- Responsive Image -->
+                <div class="imagen">
+                    <img src="img/me.gif" alt="imagen portfolio responsive" class="imgPortfolioResponsive">
+                </div>
+                <!-- Anchor aboutMe -->
+                <div class="aboutMe">
+                    <a href="#aboutMe" class="button">Acerca de mí &#8681;</a>
                     <!-- Social media -->
                     <div>
-                        <a class="buttons" href="https://www.instagram.com/"
-                            target="_blank"><button>Instgram</button></a>
-                        <!-- Cambiar por íconos -->
-                        <a class="buttons" href="https://www.linkedin.com/"
-                            target="_blank"><button>LinkedIn</button></a>
-                        <!-- Cambiar por íconos -->
-                        <a class="buttons" href="https://twitter.com/" target="_blank"><button>Twitter</button></a>
-                        <!-- Cambiar por íconos -->
-                        <a class="buttons" href="https://www.youtube.com/" target="_blank"><button>Youtube</button></a>
-                        <!-- Cambiar por íconos -->
+                        <a class="buttons" target="_blank" href="https://github.com/GuadaTruccolo"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a class="buttons" target="_blank" href="https://www.linkedin.com/"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a class="buttons" target="_blank" href="#"><i class="fa-solid fa-user-tie"></i></a>
+                        <!-- Agregar CV -->
+                        <a class="buttons" target="_blank" href="https://discordapp.com/users/guada#5719"><i
+                                class="fa-brands fa-discord"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="imagen1"> <!-- Implementar Flexbox -->
-                <img src="img/imagen.jpg" alt="imagen portfolio" class="imgPortfolio">
+            <img src="img/me.gif" alt="gif portfolio" class="imgPortfolio">
+        </div>
+    </section>
+
+    <!-- Second section (portfolio) - My projects -->
+    <section class="section2">
+        <h2 id="portfolio" class="heading"><i class="fas fa-briefcase"></i> Mi <span>Portfolio</span></h2>
+        <div class="container2">
+            <!-- 1st card -->
+            <div class="cards">
+                <div class="card">
+                    <img src="img/color-game.jpg" class="card-img-top" alt="color game">
+                    <div class="card-body">
+                        <p class="card-text">Juego en el que el usuario deberá adivinar un color a partir de su
+                            código RGB.</p>
+                        <a target="_blank" href="/Estructura/pages/color_game/colorgame.html"><button>Ver</button></a>
+                        <!-- Color Game, proyecto de JS -->
+                    </div>
+                </div>
+                <!-- 2nd card -->
+                <div class="card">
+                    <img src="img/to-do-list.jpg" class="card-img-top" alt="to do list">
+                    <div class="card-body">
+                        <p class="card-text">"To-do list" es una sencilla aplicación de lista de tareas que ayuda a
+                            organizar su día.</p>
+                        <a target="_blank" href="/Estructura/pages/to-do_list/todolist.html"><button>Ver</button></a>
+                        <!-- To-Do list, proyecto de JS -->
+                    </div>
+                </div>
+                <!-- 3rd card -->
+                <div class="card">
+                    <img src="img/weather-channel.jpg" class="card-img-top" alt="weather channel">
+                    <div class="card-body">
+                        <p class="card-text">Aplicación meteorológica en Vanilla JavaScript utilizando Open Weather
+                            Map API.</p>
+                        <a target="_blank" href="/Estructura/pages/weather_channel/weatherchannel.html"><button>Ver</button></a>
+                        <!-- Weather Channel, proyecto de JS -->
+                    </div>
+                </div>
             </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Second section (proyectos) - En construcción -->
-
-        <!-- Incluyendo 3 proyectos personales para mi portfolio -->
-
-        <section class="section2" id="proyectos">
-            <a href="pages/color_game/colorgame.html">Color Game</a> <!-- Color Game, proyecto de JS -->
-            <a href="pages/to-do_list/todolist.html">To-Do List</a> <!-- To-Do list, proyecto de JS -->
-            <a href="pages/weather_channel/weatherchannel.html">Weather Channel</a> <!-- Weather Channel, proyecto de JS -->
-        </section>
-
-        <!-- Third section (acerca de mí) -->
-        <section class="section3" id="aboutMe">
-            <div class="container3">
+    <!-- Third section (aboutMe) - Description -->
+    <section class="section3">
+        <h2 id="aboutMe" class="heading"><i class="fas fa-user-alt"></i> Acerca de <span>mí</span></h2>
+        <div class="container3">
+            <img src="img/me.webp" alt="me">
+            <div class="flexNOT">
                 <p class="me">Soy Guadalupe</p>
-                <p><span class="description">Descripción</span></p>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi
-                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla.</p>
+                <p><span class="estudiante">Estudiante de Programación</span></p>
+                <p class="text">Tengo 18 años. Estudio programación desde el año 2021.
+                    En un futuro quiero ser Desarrolladora
+                    Web para así diseñar, desarrollar, implementar y brindar soluciones
+                    digitales a la comunidad.</p>
             </div>
-        </section>
+        </div>
+    </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <!-- Copyright -->
-        <p class="copyright">Copyright &copy; My Website 2023</p>
+        <div class="container">
+            <div class="socialMedia">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="title">Información de contacto</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- Mail -->
+                        <a href="mailto:truccologuadalupe@gmail.com" target="_blank">
+                            <i class="fas fa-envelope"></i>
+                            <p> Gmail</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/guadalupe-tr%C3%BAccolo-14246a250/" target="_blank">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <p> LinkedIn</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Github -->
+                        <a href="https://github.com/GuadaTruccolo" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                            <p> Github</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <!-- Copyright -->
+                    <p class="copyright">&copy; My Website 2022</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/8fd4e9b864.js" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
