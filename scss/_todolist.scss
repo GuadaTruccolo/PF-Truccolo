@@ -1,0 +1,124 @@
+/*/ Mixins /*/
+
+@mixin botones-todolist {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
+
+.body-todolist {
+    padding: 50px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    background: #0a1f44;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .h1-todolist,
+    .footer-todolist {
+        color: white;
+    }
+
+    .input-todolist {
+        width: 450px;
+        height: 50px;
+        margin: 5px;
+        padding: 0px 20px 0px 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: white;
+        font-size: 18px;
+    }
+
+    .item-input {
+        height: 50px;
+        width: 400px;
+        padding: 0px 20px 0px 20px;
+        border: 1px solid white;
+        border-radius: 10px;
+        font-size: 18px;
+        color: white;
+        background: none;
+        outline: none;
+    }
+
+    .item {
+        margin-bottom: 10px;
+    }
+
+    .boton-editar {
+        margin: 0px 5px;
+        border: none;
+        background: none;
+        color: #62d0ff;
+        font-size: 1.4rem;
+        font-family: sans-serif;
+    }
+
+    .footer-todolist {
+        font-size: 20px;
+        padding-top: 20px;
+
+        span {
+            color: #E60930;
+            font-weight: bold;
+        }
+    }
+
+    .boton-agregar {
+        @include botones-todolist;
+        margin: 5px;
+        background-color: rgb(255, 6, 46);
+        color: white;
+
+        &:hover {
+            opacity: $buttonsopacity;
+        }
+    }
+
+    .boton-remover {
+        @include botones-todolist;
+        margin: 0px 5px;
+        color: rgb(255, 6, 46);
+        font-size: 20px;
+    }
+}
+
+/*/ Responsive design - max-width: 768px /*/
+
+@media (max-width: 768px) {
+
+    .h1-todolist {
+        padding-top: 50px;
+    }
+
+}
+
+/*/ Responsive design - max-width: 375px /*/
+
+@media (max-width: 375px) {
+
+    .input-todolist {
+        width: 60%
+    }
+
+    .container-todolist {
+        padding-top: 10px;
+    }
+
+    .container-todolist .item {
+        padding-top: 5px;
+    }
+
+    .container-todolist input {
+        width: 49%;
+    }
+
+    footer-todolist span {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
