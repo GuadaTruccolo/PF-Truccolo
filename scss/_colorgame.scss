@@ -1,0 +1,152 @@
+/*/ Extend /*/
+
+.botones-colorgame {
+    padding: 10px 20px;
+    border: 3px solid white;
+    background-color: #0a1f44;
+}
+
+.botones-hover {
+    border: 3px solid white;
+    background-color: white;
+}
+
+/*/ Mixins sin parámetro /*/
+
+@mixin botones {
+    font-size: 16px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.body-colorgame {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    background: #0a1f44;
+
+    .square {
+        float: left;
+        width: 30%;
+        height: 0;
+        padding-bottom: 30%;
+        background-color: burlywood;
+        margin: 5px;
+    }
+
+    .container-colorgame {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .h1-colorgame {
+        color: white;
+        padding-top: 25px;
+    }
+
+    #message {
+        color: white;
+        font-weight: bold;
+        font-size: 22px;
+        visibility: hidden;
+        padding-bottom: 15px;
+    }
+
+    .buttons-colorgame {
+        padding-bottom: 15px;
+    }
+    
+    .easy {
+        padding-right: 10px;
+    }
+    
+    #stripe {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #reset {
+        @include botones;
+        padding: 14px 40px;
+        border: none;
+        background-color: rgb(255, 6, 46);
+
+        &:hover {
+            opacity: $opacity-colorgame;
+        }
+    }
+    
+    #easyButton {
+        @include botones;
+        @extend .botones-colorgame;
+        transition-duration: 0.2s;
+    
+        &:hover {
+            @extend .botones-hover;
+            color: #63C306;
+            opacity: $opacity-colorgame;
+        }
+
+        &.selected {
+            background-color: white;
+            color: #63C306;
+        }
+    }
+    
+    #hardButton {
+        @include botones;
+        @extend .botones-colorgame;
+    
+        &:hover {
+            @extend .botones-hover;
+            color: rgb(255, 6, 46);
+            opacity: $opacity-colorgame;
+        }
+
+        &.selected {
+            background-color: white;
+            color: rgb(255, 6, 46);
+        }
+    }
+}
+
+/*/ Responsive design - max-width: 768px /*/
+
+@media (max-width: 768px) {
+
+    .h1-colorgame {
+        padding-top: 55px;
+    }
+
+}
+
+/*/ Responsive design - max-width: 375px /*/
+
+@media (max-width: 375px) {
+
+    .h1-colorgame {
+        font-size: 25px;
+        padding-top: 30px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .container-colorgame {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+
+    .square {
+        width: 40%;
+        height: 40px;
+    }
+
+    #message {
+        font-size: 18px;
+    }
+
+}
