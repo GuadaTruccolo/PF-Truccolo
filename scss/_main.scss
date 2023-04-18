@@ -1,0 +1,206 @@
+.section1 {
+    background-image: url("https://i0.wp.com/www.cssscript.com/wp-content/uploads/2019/01/Create-A-Background-Particles-System-With-JavaScript-And-Canvas-nodes.js.png?fit=512%2C369&ssl=1");
+    height: 586px;
+    width: auto;
+
+    .text {
+        font-size: 40px;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 25px;
+    padding-top: 60px;
+    padding-left: 170px;
+    padding-right: 50px;
+
+    span {
+        color: white;
+    }
+}
+
+.flexNOT {
+    display: block;
+    font-family: "Poppins", sans-serif;
+}
+
+.inicio {
+    font-size: 40px;
+    font-weight: 800;
+    color: #8CA7FF;
+    margin-top: 50px;
+}
+
+.imgPortfolio {
+    height: 300px;
+    width: auto;
+    border-radius: 200px;
+    background-color: white;
+    padding: 20px;
+    border: 5px solid #18185E;
+}
+
+/*/ Removing responsive image /*/
+
+.imgPortfolioResponsive {
+    display: none;
+}
+
+.button {
+    padding: 14px 40px;
+    border-radius: 4em;
+    transition: 0.5s;
+    color: #fff;
+    background: #FF8793;
+    box-shadow: 0px 5px 18px rgb(48 68 247 / 60%);
+    font-family: "Nunito", sans-serif;
+    text-decoration: none;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    margin-top: 30px;
+    font-size: 20px;
+    display: inline-block;
+    line-height: 44px;
+    color: #00d9ff;
+    background-color: #09011b;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    transition-duration: 0.4s;
+
+    &:hover {
+        color: #fff;
+        background-color: #00d9ff;
+    }
+}
+
+/*/ Footer /*/
+
+.footer-main {
+    text-align: right;
+    color: white;
+    margin-top: -40px;
+    margin-right: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/*/ Responsive design - max-width: 768px /*/
+
+@media (max-width: 768px) {
+
+    .section1 {
+        align-items: center;
+        text-align: center;
+        height: 974px;
+        padding-top: 20px;
+    }
+
+    .container {
+        padding: 0px;
+        padding-right: 95px;
+    }
+
+    .text {
+        font-size: 45px;
+    }
+
+    .button {
+        font-size: 30px;
+    }
+
+    .buttons {
+        font-size: 30px;
+        line-height: 54px;
+        width: 54px;
+        height: 54px;
+    }
+
+    /*/ Removing previous image /*/
+
+    .imgPortfolio {
+        display: none;
+    }
+
+    /*/ Adding a new image (Responisve design) /*/
+
+    .imgPortfolioResponsive {
+        display: block;
+        height: 350px;
+        width: auto;
+        border-radius: 200px;
+        background-color: white;
+        padding: 20px;
+        border: 5px solid #18185E;
+    }
+
+    .imagen {
+        padding-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+    }
+
+    /*/ Footer /*/
+
+    .footer-main {
+        text-align: center;
+        padding-right: 75px;
+        font-size: 20px;
+        margin-top: -65px;
+    }
+}
+
+/*/ Responsive design - max-width: 375px /*/
+
+@media (max-width: 375px) {
+
+    .section1 {
+        align-items: center;
+        text-align: center;
+        height: 790px;
+        margin-top: -20px;
+
+        .text {
+            font-size: 27px;
+        }
+    }
+
+    .container {
+        padding-left: 47px;
+    }
+
+    .button {
+        font-size: 25px;
+    }
+
+    .imagen {
+        padding-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .imgPortfolioResponsive {
+        height: 300px;
+        width: auto;
+    }
+
+    /*/ Footer /*/
+
+    .footer-main {
+        text-align: center;
+        padding: 0px;
+        padding-left: 15px;
+        font-size: 15px;
+        margin-top: -35px;
+    }
+}

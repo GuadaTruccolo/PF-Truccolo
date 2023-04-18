@@ -5,30 +5,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Acerca de mí | Guadalupe Trúccolo</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/ImgFavicon.png">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <!-- Third section (aboutMe) - Description -->
-    <section class="section3">
-        <h2 id="aboutMe" class="heading"><i class="fas fa-user-alt"></i> Acerca de <span>mí</span></h2>
-        <div class="container3">
-            <img src="img/me.webp" alt="me">
-            <div class="flexNOT">
-                <p class="me">Soy Guadalupe</p>
-                <p><span class="estudiante">Estudiante de Programación</span></p>
-                <p class="text">Tengo 18 años. Estudio programación desde el año 2021.
-                    En un futuro quiero ser Desarrolladora
-                    Web para así diseñar, desarrollar, implementar y brindar soluciones
-                    digitales a la comunidad.</p>
+    <!-- Header & Navbar (Hamburger menu using Bootstrap)-->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container-fluid">
+                <div class="title">
+                    <h1>Guadalupe Trúccolo</h1>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="minavbar">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Acerca de mí</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/pages/proyectos/proyectos.html">Proyectos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/pages/habilidades/habilidades.html">Habilidades</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/pages/contacto/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
+
+    <!-- Independent Page (Acerca de mí) - Description -->
+    <main>
+        <section class="section3">
+            <h2 id="aboutMe" class="heading"><i class="fas fa-user-alt"></i> Acerca de <span>mí</span></h2>
+            <div class="container3">
+                <img src="/img/me.webp" alt="me">
+                <div class="flexNOT">
+                    <p class="me">Soy Guadalupe</p>
+                    <p><span class="estudiante">Estudiante de Programación</span></p>
+                    <p class="text">Tengo 18 años. Estudio programación desde el año 2021.
+                        En un futuro quiero ser Desarrolladora
+                        Web para así diseñar, desarrollar, implementar y brindar soluciones
+                        digitales a la comunidad. Actualmente estoy estudiando en la Universidad de Buenos Aires, las
+                        carreras: Traductorado público y Licenciatura en Ciencias de la Computación.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-pages">
+        <!-- Copyright -->
+        <p class="copyright">&copy; 2023 - Portfolio | Trúccolo</p>
+    </footer>
 
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/8fd4e9b864.js" crossorigin="anonymous"></script>

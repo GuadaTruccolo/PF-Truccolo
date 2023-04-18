@@ -1,0 +1,113 @@
+/*/ Header /*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 10%;
+    height: 90px;
+    background-color: #fff;
+    box-shadow: 0px 5px 18px rgb(48 68 247 / 60%);
+    z-index: 1;
+
+    h1 {
+        font-size: 25px;
+        font-weight: bold;
+        margin-left: -20px;
+    }
+
+    /*/ Navbar /*/
+
+    .minavbar ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+
+        li {
+            margin-left: 40px;
+        }
+
+        a {
+            font-size: 20px;
+            color: #0e2431;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.64px;
+            transition: 0.2s;
+
+            .active,
+            &:hover {
+                color: $bottomline;
+                border-bottom: 3.2px solid $bottomline;
+                padding: 8px 0;
+            }
+        }
+    }
+}
+
+/*/ Responsive design - max-width: 768px /*/
+
+@media (max-width: 768px) {
+
+    /*/ Header /*/
+
+    header {
+        margin-left: -60px;
+        margin-right: -60px;
+
+        h1 {
+            margin-left: 20px;
+        }
+
+        .minavbar ul {
+            transition: 0.8s;
+            margin-top: 20px;
+            width: 50rem;
+
+            li a {
+
+                .active,
+                &:hover {
+                    color: $bottomline;
+                    border-bottom: 0px solid;
+                    padding: 8px 0;
+                }
+            }
+        }
+    }
+}
+
+/*/ Responsive design - max-width: 375px /*/
+
+@media (max-width: 375px) {
+
+    /*/ Header /*/
+
+    header {
+        padding: 1rem;
+        margin-left: -20px;
+        margin-right: -25px;
+
+        h1 {
+            margin-left: 20px;
+        }
+
+        .minavbar ul {
+            transition: 0.8s;
+            margin-top: 20px;
+            width: 100%;
+            margin-left: -10px;
+        }
+
+        li a {
+
+            .active,
+            &:hover {
+                color: $bottomline;
+                border-bottom: 0px solid;
+                padding: 8px 0;
+            }
+        }
+    }
+}

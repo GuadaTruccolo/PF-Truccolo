@@ -1,0 +1,145 @@
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    margin-top: 0px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    img {
+        height: 350px;
+        width: auto;
+    }
+}
+
+.section3 {
+    background-color: #E5ECFB;
+
+    #aboutMe,
+    #contact {
+        padding-top: 50px;
+        margin-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .me {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        font-family: "Nunito";
+        text-transform: none;
+        font-size: 30px;
+        font-weight: bold;
+        color: #1E1E5E;
+        margin-bottom: -1px;
+    }
+
+    .estudiante {
+        font-size: 1.1rem;
+        color: #8CA7FF;
+        font-weight: 600;
+    }
+
+    .text {
+        font-size: 1.1rem;
+    }
+}
+
+/*/ Footer /*/
+
+.footer-pages {
+    color: black;
+    font-size: 15px;
+    text-align: center;
+}
+
+/*/ Responsive design - max-width: 768px /*/
+
+@media (max-width: 768px) {
+
+    .section3 {
+        padding-top: 20px;
+
+        .me {
+            font-size: 40px;
+        }
+
+        .estudiante {
+            font-size: 20px;
+        }
+
+        .text {
+            font-size: 30px;
+            padding-top: 15px;
+            padding-right: 90px;
+        }
+
+        img {
+            display: none;
+        }
+    }
+
+    .container3 {
+        padding: 70px;
+    }
+
+    #aboutMe {
+        text-align: center;
+        margin-left: -90px;
+    }
+
+    /*/ Footer /*/
+
+    .footer-pages {
+        font-size: 20px;
+        margin-left: -100px;
+        padding-bottom: 10px;
+    }
+}
+
+/*/ Responsive design - max-width: 375px /*/
+
+@media (max-width: 375px) {
+    
+    .section3 {
+        margin-top: -10px;
+
+        .me {
+            padding-top: 40px;
+            font-size: 40px;
+        }
+
+        .estudiante {
+            font-size: 19px;
+        }
+
+        .text {
+            font-size: 25px;
+            padding-top: 15px;
+            padding-bottom: 25px;
+            padding: 0px;
+        }
+
+        img {
+            display: none;
+        }
+    }
+
+    .container3 {
+        padding: 20px;
+    }
+
+    #aboutMe {
+        text-align: center;
+        margin-left: -10px;
+    }
+
+    /*/ Footer /*/
+
+    .footer-pages {
+        font-size: 15px;
+        margin-left: -5px;
+    }
+}
