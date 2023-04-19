@@ -9,7 +9,7 @@
         font-size: 4rem;
         letter-spacing: 0.02em;
     }
-    
+
     .button-weatherchannel,
     .input-weatherchannel {
         border: none;
@@ -17,18 +17,18 @@
         outline: none;
         color: white;
     }
-    
+
     .ul-weatherchannel {
         list-style: none;
     }
-    
+
     .input-weatherchannel {
         font-size: 2rem;
         height: 40px;
         padding: 5px 5px 10px;
         border-bottom: 1px solid;
     }
-    
+
     .button-weatherchannel {
         font-size: 1rem;
         font-weight: bold;
@@ -37,12 +37,12 @@
         margin-left: 15px;
         border-radius: 5px;
         background: #ff1e42;
-    
+
         &:hover {
             background: #c3112d;
         }
     }
-    
+
     .container-weatherchannel {
         background-color: white;
         color: #1e2432;
@@ -53,47 +53,47 @@
         display: none;
         margin: 50px auto;
     }
-    
+
     .ciudades {
         padding: 40px 10%;
     }
-    
+
     #ciudad {
         font-size: 2rem;
         color: #717681;
     }
-    
+
     #temperatura {
         font-size: 5rem;
         font-weight: bold;
     }
-    
+
     sup {
         font-weight: normal;
         font-size: 2.5rem;
     }
-    
+
     img {
         width: 4rem;
     }
-    
+
     #descripcion {
         text-transform: uppercase;
         letter-spacing: 0.05em;
         color: #717681;
     }
-    
+
     .encabezado {
         text-align: center;
     }
-    
+
     .footer-weatherchannel {
         color: white;
         font-size: 20px;
         padding-top: 50px;
         padding-bottom: 20px;
         text-align: center;
-    
+
         span {
             color: #E60930;
             font-weight: bold;
@@ -108,7 +108,6 @@
     .h1-weatherchannel {
         padding-top: 25px;
     }
-
 }
 
 /*/ Responsive design - max-width: 375px /*/
@@ -134,5 +133,4 @@
         display: flex;
         flex-direction: column;
     }
-
 }

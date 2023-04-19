@@ -235,7 +235,7 @@ header .minavbar ul a.active, header .minavbar ul a:hover {
     padding-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
+    width: 85%;
   }
   /*/ Footer /*/
   .footer-main {
@@ -250,7 +250,7 @@ header .minavbar ul a.active, header .minavbar ul a:hover {
   .section1 {
     align-items: center;
     text-align: center;
-    height: 790px;
+    height: 910px;
     margin-top: -20px;
   }
   .section1 .container {
@@ -659,7 +659,7 @@ form .button-area span {
   }
   .container4 input,
   .container4 form .message textarea {
-    width: 240px;
+    width: 500px;
   }
 }
 /*/ Responsive design - max-width: 375px /*/
@@ -682,12 +682,11 @@ form .button-area span {
     width: 260px;
     height: 260px;
   }
-  .container4 input .message textarea,
+  .container4 input,
   .container4 form .message textarea {
     width: 240px;
   }
-  .container4 input .button-area,
-  .container4 form .button-area {
+  .container4 .button-area {
     margin-right: 0rem;
   }
 }

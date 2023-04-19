@@ -55,11 +55,11 @@
     .buttons-colorgame {
         padding-bottom: 15px;
     }
-    
+
     .easy {
         padding-right: 10px;
     }
-    
+
     #stripe {
         display: flex;
         flex-direction: column;
@@ -77,12 +77,12 @@
             opacity: $buttonsopacity;
         }
     }
-    
+
     #easyButton {
         @include botones;
         @extend .botones-colorgame;
         transition-duration: 0.2s;
-    
+
         &:hover {
             @extend .botones-hover;
             color: #63C306;
@@ -94,11 +94,11 @@
             color: #63C306;
         }
     }
-    
+
     #hardButton {
         @include botones;
         @extend .botones-colorgame;
-    
+
         &:hover {
             @extend .botones-hover;
             color: rgb(255, 6, 46);
@@ -148,5 +148,4 @@
     #message {
         font-size: 18px;
     }
-
 }

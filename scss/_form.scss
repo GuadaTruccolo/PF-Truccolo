@@ -201,7 +201,7 @@ form {
 
         input,
         form .message textarea {
-            width: 240px;
+            width: 500px;
         }
     }
 }
@@ -233,14 +233,12 @@ form {
         }
 
         input,
-        form {
-            .message textarea {
-                width: 240px;
-            }
+        form .message textarea {
+            width: 240px;
+        }
 
-            .button-area {
-                margin-right: 0rem;
-            }
+        .button-area {
+            margin-right: 0rem;
         }
     }
 }
