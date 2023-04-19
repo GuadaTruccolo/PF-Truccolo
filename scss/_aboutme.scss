@@ -13,6 +13,16 @@
         height: 350px;
         width: auto;
     }
+
+    .contenedortransicion {
+        perspective: 1000px;
+        transition: transform 0.8s ease;
+
+        &:hover {
+            transform: rotateY(180deg);
+        }
+    }
+
 }
 
 .section3 {
@@ -102,7 +112,7 @@
 /*/ Responsive design - max-width: 375px /*/
 
 @media (max-width: 375px) {
-    
+
     .section3 {
         margin-top: -10px;
 
