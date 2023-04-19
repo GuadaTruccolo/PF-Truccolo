@@ -97,11 +97,7 @@ header .minavbar ul a.active, header .minavbar ul a:hover {
   height: 586px;
   width: auto;
 }
-.section1 .text {
-  font-size: 40px;
-}
-
-.container {
+.section1 .container {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -109,24 +105,43 @@ header .minavbar ul a.active, header .minavbar ul a:hover {
   padding-top: 60px;
   padding-left: 170px;
   padding-right: 50px;
+  /*/ Removing responsive image /*/
 }
-.container span {
-  color: white;
-}
-
-.flexNOT {
+.section1 .container .flexNOT {
   display: block;
   font-family: "Poppins", sans-serif;
 }
-
-.inicio {
+.section1 .container .inicio {
   font-size: 40px;
   font-weight: 800;
   color: #8CA7FF;
   margin-top: 50px;
 }
-
-.imgPortfolio {
+.section1 .container .inicio .text {
+  font-size: 40px;
+  /*/ Utilizamos animaciones /*/
+}
+.section1 .container .inicio .text span {
+  color: white;
+}
+.section1 .container .inicio .text .contenedorincio .textoinicio {
+  animation: rebote 2s ease;
+}
+@keyframes rebote {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.section1 .container .imgPortfolio {
   height: 300px;
   width: auto;
   border-radius: 200px;
@@ -134,13 +149,10 @@ header .minavbar ul a.active, header .minavbar ul a:hover {
   padding: 20px;
   border: 5px solid #18185E;
 }
-
-/*/ Removing responsive image /*/
-.imgPortfolioResponsive {
+.section1 .container .imgPortfolioResponsive {
   display: none;
 }
-
-.button {
+.section1 .container .button {
   padding: 14px 40px;
   border-radius: 4em;
   transition: 0.5s;
@@ -152,8 +164,7 @@ header .minavbar ul a.active, header .minavbar ul a:hover {
   font-size: 22px;
   margin-bottom: 25px;
 }
-
-.buttons {
+.section1 .container .buttons {
   margin-top: 30px;
   font-size: 20px;
   display: inline-block;
@@ -167,7 +178,7 @@ header .minavbar ul a.active, header .minavbar ul a:hover {
   border-radius: 100%;
   transition-duration: 0.4s;
 }
-.buttons:hover {
+.section1 .container .buttons:hover {
   color: #fff;
   background-color: #00d9ff;
 }
@@ -190,28 +201,28 @@ header .minavbar ul a.active, header .minavbar ul a:hover {
     height: 974px;
     padding-top: 20px;
   }
-  .container {
+  .section1 .container {
     padding: 0px;
     padding-right: 95px;
+    /*/ Removing previous image /*/
+    /*/ Adding a new image (Responisve design) /*/
   }
-  .text {
+  .section1 .container .text {
     font-size: 45px;
   }
-  .button {
+  .section1 .container .button {
     font-size: 30px;
   }
-  .buttons {
+  .section1 .container .buttons {
     font-size: 30px;
     line-height: 54px;
     width: 54px;
     height: 54px;
   }
-  /*/ Removing previous image /*/
-  .imgPortfolio {
+  .section1 .container .imgPortfolio {
     display: none;
   }
-  /*/ Adding a new image (Responisve design) /*/
-  .imgPortfolioResponsive {
+  .section1 .container .imgPortfolioResponsive {
     display: block;
     height: 350px;
     width: auto;
@@ -220,11 +231,11 @@ header .minavbar ul a.active, header .minavbar ul a:hover {
     padding: 20px;
     border: 5px solid #18185E;
   }
-  .imagen {
+  .section1 .container .imagen {
     padding-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 85%;
+    width: 75%;
   }
   /*/ Footer /*/
   .footer-main {
@@ -242,22 +253,22 @@ header .minavbar ul a.active, header .minavbar ul a:hover {
     height: 790px;
     margin-top: -20px;
   }
-  .section1 .text {
-    font-size: 27px;
-  }
-  .container {
+  .section1 .container {
     padding-left: 47px;
   }
-  .button {
+  .section1 .container .text {
+    font-size: 27px;
+  }
+  .section1 .container .button {
     font-size: 25px;
   }
-  .imagen {
+  .section1 .container .imagen {
     padding-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
   }
-  .imgPortfolioResponsive {
+  .section1 .container .imgPortfolioResponsive {
     height: 300px;
     width: auto;
   }
@@ -278,6 +289,7 @@ header .minavbar ul a.active, header .minavbar ul a:hover {
   margin-top: 70px;
   z-index: -1;
   padding-bottom: 20px;
+  /*/ Utilizamos animaciones /*/
 }
 .cards button {
   background-color: #FF8793;
@@ -296,6 +308,12 @@ header .minavbar ul a.active, header .minavbar ul a:hover {
 }
 .cards .card {
   width: 18rem;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+.cards .card:hover {
+  transform: scale(1.05);
 }
 
 .heading {
@@ -360,6 +378,13 @@ header .minavbar ul a.active, header .minavbar ul a:hover {
 .container3 img {
   height: 350px;
   width: auto;
+}
+.container3 .contenedortransicion {
+  perspective: 1000px;
+  transition: transform 0.8s ease;
+}
+.container3 .contenedortransicion:hover {
+  transform: rotateY(180deg);
 }
 
 .section3 {
@@ -676,12 +701,23 @@ form .button-area span {
   margin-left: 50px;
   margin-right: 50px;
   padding-bottom: 30px;
+  /*/ Utilizamos animaciones /*/
   /*/ Responsive design - max-width: 768px /*/
   /*/ Responsive design - max-width: 375px /*/
 }
 .grid-container .img-logo {
   width: auto;
   height: auto;
+}
+.grid-container .contenedorimg {
+  overflow: visible;
+  position: relative;
+}
+.grid-container .contenedorimg img {
+  transition: transform 0.3s ease-in-out;
+}
+.grid-container .contenedorimg:hover img {
+  transform: scale(1.1);
 }
 @media (max-width: 768px) {
   .grid-container {
