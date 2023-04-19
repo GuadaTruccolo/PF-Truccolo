@@ -1,19 +1,29 @@
+/*/ Mixins con parámetro /*/
+
+@mixin d-grid ($cantColumnas, $ancho, $cantFilas, $alto) {
+    grid-template-columns: repeat($cantColumnas, $ancho, );
+    grid-template-rows: repeat($cantFilas, $alto);
+}
+
 .grid-container {
     padding-top: 70px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    @include d-grid(4, 1fr, 3, 1fr);
     gap: 10px;
     margin-left: 50px;
     margin-right: 50px;
     padding-bottom: 30px;
 
+    .img-logo {
+        width: auto;
+        height: auto;
+    }
+
     /*/ Responsive design - max-width: 768px /*/
 
     @media (max-width: 768px) {
 
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, 1fr);
+        @include d-grid(2, 1fr, 6, 1fr);
         padding-right: 110px;
     }
 
@@ -34,7 +44,7 @@
     background-color: #f2f2f2;
     padding: 20px;
 
-    img {
+    .img-logo {
         max-width: 50%;
         max-height: 100%;
     }
