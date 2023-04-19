@@ -3,82 +3,116 @@
     height: 586px;
     width: auto;
 
-    .text {
-        font-size: 40px;
-    }
-}
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 25px;
+        padding-top: 60px;
+        padding-left: 170px;
+        padding-right: 50px;
 
-.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 25px;
-    padding-top: 60px;
-    padding-left: 170px;
-    padding-right: 50px;
+        .flexNOT {
+            display: block;
+            font-family: "Poppins", sans-serif;
+        }
 
-    span {
-        color: white;
-    }
-}
+        .inicio {
+            font-size: 40px;
+            font-weight: 800;
+            color: #8CA7FF;
+            margin-top: 50px;
 
-.flexNOT {
-    display: block;
-    font-family: "Poppins", sans-serif;
-}
+            .text {
+                font-size: 40px;
 
-.inicio {
-    font-size: 40px;
-    font-weight: 800;
-    color: #8CA7FF;
-    margin-top: 50px;
-}
+                span {
+                    color: white;
+                }
 
-.imgPortfolio {
-    height: 300px;
-    width: auto;
-    border-radius: 200px;
-    background-color: white;
-    padding: 20px;
-    border: 5px solid #18185E;
-}
+                /*/ Utilizamos animaciones /*/
 
-/*/ Removing responsive image /*/
+                .contenedorincio {
 
-.imgPortfolioResponsive {
-    display: none;
-}
+                    .textoinicio {
+                        animation: rebote 2s ease;
+                    }
 
-.button {
-    padding: 14px 40px;
-    border-radius: 4em;
-    transition: 0.5s;
-    color: #fff;
-    background: #FF8793;
-    box-shadow: 0px 5px 18px rgb(48 68 247 / 60%);
-    font-family: "Nunito", sans-serif;
-    text-decoration: none;
-    font-size: 22px;
-    margin-bottom: 25px;
-}
+                    @keyframes rebote {
 
-.buttons {
-    margin-top: 30px;
-    font-size: 20px;
-    display: inline-block;
-    line-height: 44px;
-    color: #00d9ff;
-    background-color: #09011b;
-    width: 44px;
-    height: 44px;
-    text-align: center;
-    margin-right: 8px;
-    border-radius: 100%;
-    transition-duration: 0.4s;
+                        0%,
+                        20%,
+                        50%,
+                        80%,
+                        100% {
+                            transform: translateY(0);
+                        }
 
-    &:hover {
-        color: #fff;
-        background-color: #00d9ff;
+                        40% {
+                            transform: translateY(-30px);
+                        }
+
+                        60% {
+                            transform: translateY(-15px);
+                        }
+
+                        100% {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .imgPortfolio {
+            height: 300px;
+            width: auto;
+            border-radius: 200px;
+            background-color: white;
+            padding: 20px;
+            border: 5px solid #18185E;
+        }
+
+        /*/ Removing responsive image /*/
+
+        .imgPortfolioResponsive {
+            display: none;
+        }
+
+        .button {
+            padding: 14px 40px;
+            border-radius: 4em;
+            transition: 0.5s;
+            color: #fff;
+            background: #FF8793;
+            box-shadow: 0px 5px 18px rgb(48 68 247 / 60%);
+            font-family: "Nunito", sans-serif;
+            text-decoration: none;
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            font-size: 20px;
+            display: inline-block;
+            line-height: 44px;
+            color: #00d9ff;
+            background-color: #09011b;
+            width: 44px;
+            height: 44px;
+            text-align: center;
+            margin-right: 8px;
+            border-radius: 100%;
+            transition-duration: 0.4s;
+
+            &:hover {
+                color: #fff;
+                background-color: #00d9ff;
+            }
+        }
     }
 }
 
@@ -102,51 +136,51 @@
         text-align: center;
         height: 974px;
         padding-top: 20px;
-    }
 
-    .container {
-        padding: 0px;
-        padding-right: 95px;
-    }
+        .container {
+            padding: 0px;
+            padding-right: 95px;
 
-    .text {
-        font-size: 45px;
-    }
+            .text {
+                font-size: 45px;
+            }
 
-    .button {
-        font-size: 30px;
-    }
+            .button {
+                font-size: 30px;
+            }
 
-    .buttons {
-        font-size: 30px;
-        line-height: 54px;
-        width: 54px;
-        height: 54px;
-    }
+            .buttons {
+                font-size: 30px;
+                line-height: 54px;
+                width: 54px;
+                height: 54px;
+            }
 
-    /*/ Removing previous image /*/
+            /*/ Removing previous image /*/
 
-    .imgPortfolio {
-        display: none;
-    }
+            .imgPortfolio {
+                display: none;
+            }
 
-    /*/ Adding a new image (Responisve design) /*/
+            /*/ Adding a new image (Responisve design) /*/
 
-    .imgPortfolioResponsive {
-        display: block;
-        height: 350px;
-        width: auto;
-        border-radius: 200px;
-        background-color: white;
-        padding: 20px;
-        border: 5px solid #18185E;
-    }
+            .imgPortfolioResponsive {
+                display: block;
+                height: 350px;
+                width: auto;
+                border-radius: 200px;
+                background-color: white;
+                padding: 20px;
+                border: 5px solid #18185E;
+            }
 
-    .imagen {
-        padding-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 85%;
+            .imagen {
+                padding-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 75%;
+            }
+        }
     }
 
     /*/ Footer /*/
@@ -169,29 +203,29 @@
         height: 790px;
         margin-top: -20px;
 
-        .text {
-            font-size: 27px;
+        .container {
+            padding-left: 47px;
+
+            .text {
+                font-size: 27px;
+            }
+
+            .button {
+                font-size: 25px;
+            }
+
+            .imagen {
+                padding-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+            }
+
+            .imgPortfolioResponsive {
+                height: 300px;
+                width: auto;
+            }
         }
-    }
-
-    .container {
-        padding-left: 47px;
-    }
-
-    .button {
-        font-size: 25px;
-    }
-
-    .imagen {
-        padding-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-    }
-
-    .imgPortfolioResponsive {
-        height: 300px;
-        width: auto;
     }
 
     /*/ Footer /*/
