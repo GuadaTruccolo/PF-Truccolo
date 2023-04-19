@@ -10,7 +10,7 @@ function cargarCiudad() {
     $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + ciudad + "&appid=1a9b3670ada3ece0551373f7325e028d",
         function (data) {
             console.log(data);
-            document.querySelector(".container").style.display = "block";
+            document.querySelector(".container-weatherchannel").style.display = "block";
             document.querySelector("footer").style.paddingTop = "0px";
             document.querySelector("#ciudad").textContent = data.name;
             document.querySelector("#temperatura").innerHTML = parseInt(data.main.temp - 273.15) + "<sup>°C</sup>";

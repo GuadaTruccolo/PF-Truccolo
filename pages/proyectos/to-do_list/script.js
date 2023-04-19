@@ -1,5 +1,5 @@
-let input = document.querySelector(".input");
-let container = document.querySelector(".container");
+let input = document.querySelector(".input-todolist");
+let container = document.querySelector(".container-todolist");
 let botonAgregar = document.querySelector(".boton-agregar");
 
 class Item {

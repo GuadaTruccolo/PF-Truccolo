@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*/ Importing Google fonts /*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
@@ -41,7 +42,7 @@ header .minavbar ul a {
   letter-spacing: 0.64px;
   transition: 0.2s;
 }
-header .minavbar ul a .active, header .minavbar ul a:hover {
+header .minavbar ul a.active, header .minavbar ul a:hover {
   color: #011aff;
   border-bottom: 3.2px solid #011aff;
   padding: 8px 0;
@@ -62,7 +63,7 @@ header .minavbar ul a .active, header .minavbar ul a:hover {
     margin-top: 20px;
     width: 50rem;
   }
-  header .minavbar ul li a .active, header .minavbar ul li a:hover {
+  header .minavbar ul li a.active, header .minavbar ul li a:hover {
     color: #011aff;
     border-bottom: 0px solid;
     padding: 8px 0;
@@ -85,7 +86,7 @@ header .minavbar ul a .active, header .minavbar ul a:hover {
     width: 100%;
     margin-left: -10px;
   }
-  header li a .active, header li a:hover {
+  header li a.active, header li a:hover {
     color: #011aff;
     border-bottom: 0px solid;
     padding: 8px 0;
@@ -494,9 +495,10 @@ main h2 {
   justify-content: center;
   padding: 50px;
 }
-.container4 img {
+.container4 .img-form {
   border-radius: 1.5rem;
   height: 550px;
+  width: auto;
 }
 
 /*/ Form /*/
@@ -651,7 +653,7 @@ form .button-area span {
   .container4 .contenido .name {
     padding-top: 15px;
   }
-  .container4 img {
+  .container4 .img-form {
     width: 260px;
     height: 260px;
   }
@@ -664,6 +666,7 @@ form .button-area span {
     margin-right: 0rem;
   }
 }
+/*/ Mixins con parámetro /*/
 .grid-container {
   padding-top: 70px;
   display: grid;
@@ -675,6 +678,10 @@ form .button-area span {
   padding-bottom: 30px;
   /*/ Responsive design - max-width: 768px /*/
   /*/ Responsive design - max-width: 375px /*/
+}
+.grid-container .img-logo {
+  width: auto;
+  height: auto;
 }
 @media (max-width: 768px) {
   .grid-container {
@@ -698,9 +705,345 @@ form .button-area span {
   background-color: #f2f2f2;
   padding: 20px;
 }
-.grid-item img {
+.grid-item .img-logo {
   max-width: 50%;
   max-height: 100%;
+}
+
+/*/ Extend /*/
+.botones-colorgame, .body-colorgame #hardButton, .body-colorgame #easyButton {
+  padding: 10px 20px;
+  border: 3px solid white;
+  background-color: #0a1f44;
+}
+
+.botones-hover, .body-colorgame #hardButton:hover, .body-colorgame #easyButton:hover {
+  border: 3px solid white;
+  background-color: white;
+}
+
+/*/ Mixins sin parámetro /*/
+.body-colorgame {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  background: #0a1f44;
+}
+.body-colorgame .square {
+  float: left;
+  width: 30%;
+  height: 0;
+  padding-bottom: 30%;
+  background-color: burlywood;
+  margin: 5px;
+}
+.body-colorgame .container-colorgame {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.body-colorgame .h1-colorgame {
+  color: white;
+  padding-top: 25px;
+}
+.body-colorgame #message {
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  visibility: hidden;
+  padding-bottom: 15px;
+}
+.body-colorgame .buttons-colorgame {
+  padding-bottom: 15px;
+}
+.body-colorgame .easy {
+  padding-right: 10px;
+}
+.body-colorgame #stripe {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+.body-colorgame #reset {
+  font-size: 16px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  padding: 14px 40px;
+  border: none;
+  background-color: rgb(255, 6, 46);
+}
+.body-colorgame #reset:hover {
+  opacity: 0.9;
+}
+.body-colorgame #easyButton {
+  font-size: 16px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  transition-duration: 0.2s;
+}
+.body-colorgame #easyButton:hover {
+  color: #63C306;
+  opacity: 0.9;
+}
+.body-colorgame #easyButton.selected {
+  background-color: white;
+  color: #63C306;
+}
+.body-colorgame #hardButton {
+  font-size: 16px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+.body-colorgame #hardButton:hover {
+  color: rgb(255, 6, 46);
+  opacity: 0.9;
+}
+.body-colorgame #hardButton.selected {
+  background-color: white;
+  color: rgb(255, 6, 46);
+}
+
+/*/ Responsive design - max-width: 768px /*/
+@media (max-width: 768px) {
+  .h1-colorgame {
+    padding-top: 55px;
+  }
+}
+/*/ Responsive design - max-width: 375px /*/
+@media (max-width: 375px) {
+  .h1-colorgame {
+    font-size: 25px;
+    padding-top: 30px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .container-colorgame {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .square {
+    width: 40%;
+    height: 40px;
+  }
+  #message {
+    font-size: 18px;
+  }
+}
+/*/ Mixins /*/
+.body-todolist {
+  padding: 50px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  background: #0a1f44;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.body-todolist .h1-todolist,
+.body-todolist .footer-todolist {
+  color: white;
+}
+.body-todolist .input-todolist {
+  width: 450px;
+  height: 50px;
+  margin: 5px;
+  padding: 0px 20px 0px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 18px;
+}
+.body-todolist .item-input {
+  height: 50px;
+  width: 400px;
+  padding: 0px 20px 0px 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  background: none;
+  outline: none;
+}
+.body-todolist .item {
+  margin-bottom: 10px;
+}
+.body-todolist .boton-editar {
+  margin: 0px 5px;
+  border: none;
+  background: none;
+  color: #62d0ff;
+  font-size: 1.4rem;
+  font-family: sans-serif;
+}
+.body-todolist .footer-todolist {
+  font-size: 20px;
+  padding-top: 20px;
+}
+.body-todolist .footer-todolist span {
+  color: #E60930;
+  font-weight: bold;
+}
+.body-todolist .boton-agregar {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: rgb(255, 6, 46);
+  color: white;
+}
+.body-todolist .boton-agregar:hover {
+  opacity: 0.9;
+}
+.body-todolist .boton-remover {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  margin: 0px 5px;
+  color: rgb(255, 6, 46);
+  font-size: 20px;
+}
+
+/*/ Responsive design - max-width: 768px /*/
+@media (max-width: 768px) {
+  .h1-todolist {
+    padding-top: 50px;
+  }
+}
+/*/ Responsive design - max-width: 375px /*/
+@media (max-width: 375px) {
+  .input-todolist {
+    width: 60%;
+  }
+  .container-todolist {
+    padding-top: 10px;
+  }
+  .container-todolist .item {
+    padding-top: 5px;
+  }
+  .container-todolist input {
+    width: 49%;
+  }
+  footer-todolist span {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.body-weatherchannel {
+  padding: 50px;
+  font-family: "Roboto", sans-serif;
+  background: #0a1f44;
+  color: white;
+}
+.body-weatherchannel .h1-weatherchannel {
+  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: 0.02em;
+}
+.body-weatherchannel .button-weatherchannel,
+.body-weatherchannel .input-weatherchannel {
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+}
+.body-weatherchannel .ul-weatherchannel {
+  list-style: none;
+}
+.body-weatherchannel .input-weatherchannel {
+  font-size: 2rem;
+  height: 40px;
+  padding: 5px 5px 10px;
+  border-bottom: 1px solid;
+}
+.body-weatherchannel .button-weatherchannel {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  padding: 15px 20px;
+  margin-left: 15px;
+  border-radius: 5px;
+  background: #ff1e42;
+}
+.body-weatherchannel .button-weatherchannel:hover {
+  background: #c3112d;
+}
+.body-weatherchannel .container-weatherchannel {
+  background-color: white;
+  color: #1e2432;
+  width: 300px;
+  height: 350px;
+  border-radius: 20px;
+  margin-left: 50px;
+  display: none;
+  margin: 50px auto;
+}
+.body-weatherchannel .ciudades {
+  padding: 40px 10%;
+}
+.body-weatherchannel #ciudad {
+  font-size: 2rem;
+  color: #717681;
+}
+.body-weatherchannel #temperatura {
+  font-size: 5rem;
+  font-weight: bold;
+}
+.body-weatherchannel sup {
+  font-weight: normal;
+  font-size: 2.5rem;
+}
+.body-weatherchannel img {
+  width: 4rem;
+}
+.body-weatherchannel #descripcion {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #717681;
+}
+.body-weatherchannel .encabezado {
+  text-align: center;
+}
+.body-weatherchannel .footer-weatherchannel {
+  color: white;
+  font-size: 20px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.body-weatherchannel .footer-weatherchannel span {
+  color: #E60930;
+  font-weight: bold;
+}
+
+/*/ Responsive design - max-width: 768px /*/
+@media (max-width: 768px) {
+  .h1-weatherchannel {
+    padding-top: 25px;
+  }
+}
+/*/ Responsive design - max-width: 375px /*/
+@media (max-width: 375px) {
+  .h1-weatherchannel {
+    font-size: 40px;
+    padding-top: 30px;
+  }
+  .encabezado input {
+    width: 50%;
+    font-size: 20px;
+    padding-top: 15px;
+  }
+  .encabezado button {
+    font-size: 14px;
+  }
+  .footer-weatherchannel span {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

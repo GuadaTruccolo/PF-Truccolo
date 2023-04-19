@@ -36,7 +36,7 @@ header {
             letter-spacing: 0.64px;
             transition: 0.2s;
 
-            .active,
+            &.active,
             &:hover {
                 color: $bottomline;
                 border-bottom: 3.2px solid $bottomline;
@@ -67,7 +67,7 @@ header {
 
             li a {
 
-                .active,
+                &.active,
                 &:hover {
                     color: $bottomline;
                     border-bottom: 0px solid;
@@ -102,7 +102,7 @@ header {
 
         li a {
 
-            .active,
+            &.active,
             &:hover {
                 color: $bottomline;
                 border-bottom: 0px solid;

@@ -31,9 +31,10 @@ main {
     justify-content: center;
     padding: 50px;
 
-    img {
+    .img-form {
         border-radius: 1.5rem;
         height: 550px;
+        width: auto;
     }
 }
 
@@ -226,7 +227,7 @@ form {
             }
         }
 
-        img {
+        .img-form {
             width: 260px;
             height: 260px;
         }
