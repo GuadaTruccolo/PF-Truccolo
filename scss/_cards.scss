@@ -24,8 +24,17 @@
         }
     }
 
+    /*/ Utilizamos animaciones /*/
+
     .card {
         width: 18rem;
+        overflow: hidden;
+        position: relative;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 }
 
@@ -69,7 +78,7 @@
 /*/ Responsive design - max-width: 375px /*/
 
 @media (max-width: 375px) {
-    
+
     .heading {
         margin-left: 0px;
     }
