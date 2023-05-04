@@ -107,6 +107,7 @@
 
     .h1-weatherchannel {
         padding-top: 25px;
+        padding-bottom: 35px;
     }
 }
 
@@ -114,19 +115,30 @@
 
 @media (max-width: 375px) {
 
+    .body-weatherchannel {
+
+        .encabezado {
+
+            input {
+                width: 62%;
+                font-size: 20px;
+                padding-top: 15px;
+            }
+
+            button {
+                margin-top: 20px;
+                font-size: 14px;
+            }
+        }
+
+        .container-weatherchannel {
+            width: 279px;
+        }
+    }
+
     .h1-weatherchannel {
         font-size: 40px;
         padding-top: 30px;
-    }
-
-    .encabezado input {
-        width: 50%;
-        font-size: 20px;
-        padding-top: 15px;
-    }
-
-    .encabezado button {
-        font-size: 14px;
     }
 
     .footer-weatherchannel span {

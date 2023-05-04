@@ -22,7 +22,6 @@
             transform: rotateY(180deg);
         }
     }
-
 }
 
 .section3 {
@@ -97,14 +96,14 @@
 
     #aboutMe {
         text-align: center;
-        margin-left: -90px;
+        margin-left: 0px;
     }
 
     /*/ Footer /*/
 
     .footer-pages {
         font-size: 20px;
-        margin-left: -100px;
+        
         padding-bottom: 10px;
     }
 }
@@ -150,6 +149,5 @@
 
     .footer-pages {
         font-size: 15px;
-        margin-left: -5px;
     }
 }

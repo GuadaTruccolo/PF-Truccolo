@@ -94,31 +94,42 @@
         padding-top: 50px;
     }
 
+    .container-todolist {
+        margin-top: 20px;
+    }
 }
 
 /*/ Responsive design - max-width: 375px /*/
 
 @media (max-width: 375px) {
 
-    .input-todolist {
-        width: 60%
+    .body-todolist {
+        width: 300px;
+        padding: 37px;
+
+        .h1-todolist {
+            padding-bottom: 15px;
+        }
+
+        .input-todolist {
+            width: 60%;
+        }
     }
 
     .container-todolist {
-        padding-top: 10px;
+
+        .item-input {
+            padding-top: 5px;
+            width: 45%;
+        }
+
+        input {
+            width: 49%;
+        }
     }
 
-    .container-todolist .item {
-        padding-top: 5px;
-    }
-
-    .container-todolist input {
-        width: 49%;
-    }
-
-    footer-todolist span {
+    .footer-todolist span {
         display: flex;
         flex-direction: column;
     }
-
 }

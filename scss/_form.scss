@@ -72,7 +72,7 @@ form {
 
     input,
     .message textarea {
-        width: 100%;
+        width: 482px;
         height: 100%;
         outline: none;
         padding: 0 16px 0 10px;
@@ -188,8 +188,6 @@ form {
         background-color: #1E1E5E;
         display: flex;
         flex-direction: column;
-        margin-right: 150px;
-        margin-left: 40px;
         padding: 30px;
 
         .contenido {
@@ -201,7 +199,7 @@ form {
 
         input,
         form .message textarea {
-            width: 500px;
+            width: 530px;
         }
     }
 }
@@ -213,9 +211,7 @@ form {
     /*/ Form /*/
 
     .container4 {
-        padding: 48px;
-        margin-left: 0.7rem;
-        margin-right: 0.7rem;
+        margin: 30px;
 
         .contenido {
             margin-left: 0rem;

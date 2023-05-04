@@ -58,14 +58,9 @@
 
 @media (max-width: 768px) {
 
-    .heading {
-        margin-left: -80px;
-    }
-
     .cards {
         display: flex;
         flex-direction: column;
-        margin-right: 125px;
 
         .card {
             width: 500px;
@@ -78,10 +73,6 @@
 /*/ Responsive design - max-width: 375px /*/
 
 @media (max-width: 375px) {
-
-    .heading {
-        margin-left: 0px;
-    }
 
     .cards {
         display: flex;

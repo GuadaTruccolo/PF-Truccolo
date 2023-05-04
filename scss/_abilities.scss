@@ -39,9 +39,7 @@
     /*/ Responsive design - max-width: 768px /*/
 
     @media (max-width: 768px) {
-
         @include d-grid(2, 1fr, 6, 1fr);
-        padding-right: 110px;
     }
 
     /*/ Responsive design - max-width: 375px /*/

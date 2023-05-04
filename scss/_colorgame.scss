@@ -117,9 +117,8 @@
 @media (max-width: 768px) {
 
     .h1-colorgame {
-        padding-top: 55px;
+        margin-top: 95px;
     }
-
 }
 
 /*/ Responsive design - max-width: 375px /*/
@@ -129,6 +128,7 @@
     .h1-colorgame {
         font-size: 25px;
         padding-top: 30px;
+        margin-top: 30px;
         padding-left: 8px;
         padding-right: 8px;
     }
@@ -137,12 +137,12 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        padding: 20px 20px 0px 20px;
 
-    }
-
-    .square {
-        width: 40%;
-        height: 40px;
+        .square {
+            width: 40%;
+            height: 40px;
+        }
     }
 
     #message {
